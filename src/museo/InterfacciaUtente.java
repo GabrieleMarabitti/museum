@@ -2,6 +2,7 @@ package museo;
 
 import museo.exceptions.InputNonValidoException;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InterfacciaUtente {
@@ -118,7 +119,13 @@ public class InterfacciaUtente {
             System.out.println("1 - Quadri");
             System.out.println("2 - Statue");
             System.out.println("3 - Autori");
-            int scelta = sc.nextInt();
+            int scelta =0 ;
+            try{
+                scelta = sc.nextInt();
+            } catch (InputMismatchException e){
+                System.err.println("Inserisci un numero!");
+
+            }
             if(scelta == 1){
                 try{
                     scegliQuadri();

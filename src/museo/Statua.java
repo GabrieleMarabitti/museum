@@ -1,9 +1,9 @@
 package museo;
 
-import museo.comparators.OrdinaByMaterialeCresComparator;
-import museo.comparators.OrdinaByMaterialeDescComparator;
-import museo.comparators.OrdinaByNomeCrescenteComparator;
-import museo.comparators.OrdinaByNomeDecrescenteComparator;
+import museo.comparators.OrdinaByMaterialeCrescenteComparator;
+import museo.comparators.OrdinaByMaterialeDecrescenteComparator;
+import museo.comparators.OrdinaByNomeAutoreCrescenteComparator;
+import museo.comparators.OrdinaByNomeAutoreDecrescenteComparator;
 import museo.exceptions.EnumNonPresente;
 
 import java.util.ArrayList;
@@ -65,7 +65,7 @@ public class Statua extends Opera{
 
     public static Set<Statua> ordinaMaterialeDecrescente(ArrayList<Opera> esp, HashSet<Opera> dep){
         System.out.println("STATUE MATERIALE DECRESCENTE");
-        OrdinaByMaterialeDescComparator cm = new OrdinaByMaterialeDescComparator();
+        OrdinaByMaterialeDecrescenteComparator cm = new OrdinaByMaterialeDecrescenteComparator();
         Set<Statua> statue = new TreeSet<>(cm);
         for(Opera opera : esp){
             if(opera instanceof Statua){
@@ -82,7 +82,7 @@ public class Statua extends Opera{
 
     public static Set<Statua> ordinaAutoreCrescente(ArrayList<Opera> esp, HashSet<Opera> dep){
         System.out.println("STATUE AUTORE CRESCENTE");
-        OrdinaByNomeCrescenteComparator nc = new OrdinaByNomeCrescenteComparator();
+        OrdinaByNomeAutoreCrescenteComparator nc = new OrdinaByNomeAutoreCrescenteComparator();
         Set<Statua> statue = new TreeSet<>(nc);
         for(Opera opera : esp){
             if(opera instanceof Statua){
@@ -99,7 +99,7 @@ public class Statua extends Opera{
 
     public static Set<Statua> ordinaAutoreDecrescente(ArrayList<Opera> esp, HashSet<Opera> dep){
         System.out.println("STATUE AUTORE DECRESCENTE");
-        OrdinaByNomeDecrescenteComparator nc = new OrdinaByNomeDecrescenteComparator();
+        OrdinaByNomeAutoreDecrescenteComparator nc = new OrdinaByNomeAutoreDecrescenteComparator();
         Set<Statua> statue = new TreeSet<>(nc);
         for(Opera opera : esp){
             if(opera instanceof Statua){
@@ -116,7 +116,7 @@ public class Statua extends Opera{
 
     public static Set<Statua> ordinaMaterialeCrescente(ArrayList<Opera> esp, HashSet<Opera> dep){
         System.out.println("STATUE MATERIALE CRESCENTE");
-        OrdinaByMaterialeCresComparator cm = new OrdinaByMaterialeCresComparator();
+        OrdinaByMaterialeCrescenteComparator cm = new OrdinaByMaterialeCrescenteComparator();
         Set<Statua> statue = new TreeSet<>(cm);
         for(Opera opera : esp){
             if(opera instanceof Statua){

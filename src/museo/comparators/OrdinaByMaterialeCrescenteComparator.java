@@ -1,11 +1,10 @@
 package museo.comparators;
 
-import museo.Opera;
 import museo.Statua;
 
 import java.util.Comparator;
 
-public class OrdinaByMaterialeCresComparator implements Comparator<Statua> {
+public class OrdinaByMaterialeCrescenteComparator implements Comparator<Statua> {
     @Override
     public int compare(Statua o1, Statua o2) {
         int result = 0;

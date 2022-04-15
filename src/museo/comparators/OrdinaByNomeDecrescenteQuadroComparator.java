@@ -7,8 +7,6 @@ import java.util.Comparator;
 public class OrdinaByNomeDecrescenteQuadroComparator implements Comparator<Quadro> {
     @Override
     public int compare(Quadro o1, Quadro o2) {
-        int result = 0;
-        result = o1.getAutore().toString().compareTo(o2.getAutore().toString());
-        return -result;
+        return -(new OrdinaByNomeCrescenteQuadroComparator().compare(o1, o2));
     }
 }

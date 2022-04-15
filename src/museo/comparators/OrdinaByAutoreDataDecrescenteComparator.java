@@ -7,8 +7,6 @@ import java.util.Comparator;
 public class OrdinaByAutoreDataDecrescenteComparator implements Comparator<Autore> {
     @Override
     public int compare(Autore o1, Autore o2) {
-        int result = 0;
-        result = o1.getDataNascita().compareTo(o2.getDataNascita());
-        return -result;
+        return -(new OrdinaByAutoreDataCrescenteComparator().compare(o1, o2));
     }
 }
